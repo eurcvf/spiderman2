@@ -27,3 +27,7 @@ var swiper = new Swiper(".slide-video", {
     }
   }
 });
+
+AOS.init({
+  duration: 900
+});

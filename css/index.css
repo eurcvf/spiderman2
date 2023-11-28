@@ -412,6 +412,10 @@ header nav a:hover {
   margin-bottom: 4.5rem;
 }
 
+.icon-scroll {
+  animation: upAndDown 1.5s infinite alternate;
+}
+
 /* FOOTER */
 footer {
   width: 100%;
@@ -497,6 +501,15 @@ footer .right span {
   }
   100% {
     background-image: url('../assets/bg/01.png');
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0.9375rem);
   }
 }
 

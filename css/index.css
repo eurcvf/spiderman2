@@ -90,14 +90,29 @@ header nav a:hover {
   padding-bottom: 8.93rem;
 }
 
+.s-hero:after {
+  content: '';
+  width: 100%;
+  height: 13.5rem;
+  background: linear-gradient(180deg, #060608 0%, rgba(0,4,7,0.00) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
 .s-hero .container {
   display: flex;
   justify-content: space-between;
 }
 
 .s-hero .left {
+  position: relative;
   width: 100%;
   max-width: 38.8rem;
+  z-index: 10;
 }
 
 .s-hero .left .platform {
@@ -255,6 +270,7 @@ header nav a:hover {
   top: 5.56rem;
   right: 0;
   z-index: 5;
+  pointer-events: none;
 }
 
 .s-videos .container {
@@ -496,6 +512,142 @@ footer .right span {
     background-image: url('../assets/bg/01.png');
   }
 }
+
+/* RESPONSIVO */
+@media (max-width: 1200px) {
+  .s-hero {
+    height: auto;
+    padding-top: 4.3rem;
+    padding-bottom: 4.3rem;
+  }
+
+  .s-videos {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .s-videos .btn {
+    display: none;
+  }
+
+  .s-villain {
+    height: 34.3rem;
+  }
+
+  footer {
+    padding-top: 3.1rem;
+    padding-bottom: 3.1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  header nav {
+    display: none;
+  }
+
+  .s-hero .left {
+    max-width: 100%;
+  }
+
+  .s-hero .right {
+    display: none;
+  }
+
+  .villain:after,
+  .villain:before {
+    height: 6.25rem;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  footer .left {
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  header .logo {
+    max-width: 7.8rem;
+  }
+
+  header button {
+    padding: 0 1rem;
+  }
+
+  .s-hero {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-size: 1120px;
+    background-position-x: 62%;
+  }
+
+  .s-hero .left h1 {
+    font-size: 2.6rem;
+    max-width: 84%;
+    line-height: 120%;
+  }
+
+  .s-hero .left .description {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .s-hero .left .value {
+    margin-bottom: 2.5rem;
+  }
+
+  .s-hero .left ul p {
+    font-size: 0.8rem;
+  }
+
+  .s-hero .left ul:nth-child(2) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .s-hero .left ul li {
+    gap: 0.6rem;
+  }
+
+  .s-hero .left ul {
+    gap: 0.6rem;
+  }
+
+  .s-videos {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .s-villain {
+    height: auto;
+    padding: 3.75rem 0;
+    background-size: 900px;
+  }
+
+  .s-villain h2 {
+    font-size: 2.25rem;
+  }
+
+  .s-villain p {
+    font-size: 1rem;
+    max-width: 300px;
+    margin-bottom: 2.5rem;
+  }
+
+  footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  footer:before {
+    background-size: 120%;
+  }
+}
+
 
 
 
